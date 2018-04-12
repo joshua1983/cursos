@@ -42,14 +42,14 @@ class Welcome extends CI_Controller {
 				}
 				$time = time();
 				$key = "kgh5bvoc";
-		    $token = array(
+		    	$token = array(
 					'iat' => $time, // Tiempo que inició el token
-			    'exp' => $time + (60*60), // Tiempo que expirará el token (+1 hora)
-			    'data' => [ // información del usuario
-			        'id' => 'josue@algo.com',
-			        'name' => 'Josue Barrios Rodriguez',
-							'tipo' => $tipo
-			    ]
+			    	'exp' => $time + (60*60), // Tiempo que expirará el token (+1 hora)
+			    	'data' => [ // información del usuario
+			        	'id' => 'josue@algo.com',
+			        	'name' => 'Josue Barrios Rodriguez',
+						'tipo' => $tipo
+			    	]
 		    );
 		    $jwt = JWT::encode($token, $key);
 				$this->usuario_model->registrar_login($jwt);
