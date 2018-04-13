@@ -11,6 +11,11 @@ import { MenuAdminComponent } from '../componentes/admin/index';
 })
 export class HomeComponent implements OnInit{
     users: Usuario[] = [];
+    /*
+    * 1= admin
+    * 2= estudiante
+    */
+   tipo:number = 1;
 
     constructor(private usuarioServicio: UsuarioService){}
 

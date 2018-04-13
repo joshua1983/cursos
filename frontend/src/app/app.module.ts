@@ -9,6 +9,7 @@ import { AuthGuard } from './_guard/index';
 import { AutenticacionService, UsuarioService } from './_services/index';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { NivelComponent } from './componentes/admin/index';
 import { MenuAdminComponent } from './componentes/admin/index';
 import { routing } from './app.routing';
 
@@ -18,7 +19,8 @@ import { routing } from './app.routing';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    NivelComponent
   ],
   imports: [
     BrowserModule,
