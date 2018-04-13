@@ -36,8 +36,8 @@ class Welcome extends CI_Controller {
 
 		$usuario_valido = $this->usuario_model->login($usuario, $password);
 		if ($usuario_valido > 0){
-				$tipo = 1; // estudiante
-				if ($usuario == 'docente'){
+				$tipo = 1; // admin
+				if ($usuario == 'est'){
 					$tipo = 2;
 				}
 				$time = time();

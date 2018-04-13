@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 import { HttpModule }  from '@angular/http';
 import { FormsModule } from '@angular/forms'
 
-
 import { AppComponent } from './app.component';
 import { AuthGuard } from './_guard/index';
 import { AutenticacionService, UsuarioService } from './_services/index';
+import { routing } from './app.routing';
+
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { NivelComponent } from './componentes/admin/index';
-import { MenuAdminComponent } from './componentes/admin/index';
-import { routing } from './app.routing';
+import { MenuAdminComponent, NivelComponent, CursosComponent, PruebasComponent } from './componentes/admin/index';
+import { MaterialComponent, MenuEstComponent, PruebaComponent, PerfilComponent } from './componentes/estudiante/index';
+
+
 
 
 @NgModule({
@@ -20,7 +22,13 @@ import { routing } from './app.routing';
     LoginComponent,
     HomeComponent,
     MenuAdminComponent,
-    NivelComponent
+    NivelComponent,
+    CursosComponent,
+    PruebasComponent,
+    MaterialComponent,
+    MenuEstComponent,
+    PruebaComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

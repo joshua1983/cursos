@@ -20,4 +20,13 @@ export class UsuarioService{
             .map((response:Response) => response.json());
 
     }
+
+    getUsuarioActual():Usuario{
+        let user:Usuario = new Usuario();
+        let jsonUser = JSON.parse( localStorage.getItem('currentUser') );
+        user.tipo = jsonUser.tipo;
+        user.usuario = jsonUser.usuario;
+        user.token = jsonUser.token;
+        return user;
+    }
 }

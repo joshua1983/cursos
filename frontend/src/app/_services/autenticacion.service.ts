@@ -19,12 +19,13 @@ export class AutenticacionService{
             password: pass
         })).map((response: Response) =>{
             console.log(response);
-            let token = response.json() && response.json().token;
-            if (token){
-                this.token = token;
+            let responseJson = response.json();
+            if (responseJson.token){
+                this.token = responseJson.token;
                 localStorage.setItem('currentUser', JSON.stringify({
-                    usuario:user,
-                    token: token
+                    usuario: user,
+                    token: responseJson.token,
+                    tipo: responseJson.tipo
                 }));
                 return true;
             }else{
