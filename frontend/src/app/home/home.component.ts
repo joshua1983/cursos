@@ -24,10 +24,11 @@ export class HomeComponent implements OnInit{
     }
 
     ngOnInit(){
-        
-        this.usuarioServicio.getUsuarios()
-            .subscribe(usuarios => {
-                this.users = usuarios
-            });
+        if (this.usuario.tipo == 1){
+            this.usuarioServicio.getUsuarios()
+                .subscribe(usuarios => {
+                    this.users = usuarios
+                });
+        }
     }
 }

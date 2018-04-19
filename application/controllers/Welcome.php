@@ -62,6 +62,11 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	public function getPagina(){
+		$this->load->model('pagina_model');
+		
+	}
+
 	public function logout(){
 
 	}
