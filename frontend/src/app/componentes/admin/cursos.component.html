@@ -9,12 +9,13 @@
         <div class="card-title">Nueva Pagina</div>
         
         <div class="card-content">
-            editor...
+            <label for="titulo">Titulo</label>
+            <input type="text" [(ngModel)]="titulo">
             <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
 
         </div>
         <div class="card-action">
-            <a href="#">Guardar</a>
+            <button (click)="guardarPagina()">Guardar</button>
         </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { AuthGuard } from './_guard/index';
-import { AutenticacionService, UsuarioService } from './_services/index';
+import { AutenticacionService, UsuarioService, PaginaService } from './_services/index';
 import { routing } from './app.routing';
 
 import { LoginComponent } from './login/login.component';
@@ -44,7 +44,8 @@ import { NgxEditorModule } from 'ngx-editor';
   providers: [
     AuthGuard,
     AutenticacionService,
-    UsuarioService
+    UsuarioService,
+    PaginaService
   ],
   bootstrap: [AppComponent]
 })
